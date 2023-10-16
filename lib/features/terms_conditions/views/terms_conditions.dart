@@ -70,6 +70,7 @@ class _TermsConditionsState extends State<TermsConditions> {
       bottomNavigationBar: ElevatedButton(
           onPressed: () {
             termsConditionController.termsConditionsTextEditingController.clear();
+            termsConditionController.resetTranslatedInputText();
             Get.bottomSheet(
               const AddEditBottomSheet(),
             );

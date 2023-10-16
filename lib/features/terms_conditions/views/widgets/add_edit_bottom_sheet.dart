@@ -36,6 +36,7 @@ class AddEditBottomSheet extends StatelessWidget {
                   decoration: InputDecoration(
                     labelText: AppStrings.termsCondition,
                     hintText: AppStrings.termsCondition,
+                    hintStyle: const TextStyle(color: Colors.grey),
                     suffixIcon: IconButton(
                       onPressed: () {
                         if (termsLogic.getSpeechToText.isNotListening) {

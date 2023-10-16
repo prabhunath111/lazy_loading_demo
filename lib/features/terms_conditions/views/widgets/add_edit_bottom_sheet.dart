@@ -177,12 +177,14 @@ class AddEditBottomSheet extends StatelessWidget {
                 width: Get.width,
                 child: ElevatedButton(
                   onPressed: () {
-                    if(index != null){
-                      termsConditionController.editTermsCondition(index!);
-                    } else {
-                      termsConditionController.addNewTermsCondition();
+                    if(termsConditionController.termsConditionsTextEditingController.text.trim().isNotEmpty){
+                      if(index != null){
+                        termsConditionController.editTermsCondition(index!);
+                      } else {
+                        termsConditionController.addNewTermsCondition();
+                      }
+                      Get.back();
                     }
-                    Get.back();
                   },
                   style: AppBtnStyle.appElevatedStyle,
                   child: const Text(AppStrings.confirmBtn),
